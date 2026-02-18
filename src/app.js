@@ -1,12 +1,12 @@
 const express = require("express");
-
 const app = express();
+
+const productsRouter = require("./routes/products.router");
+const cartsRouter = require("./routes/carts.router");
+
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("API funcionando");
-});
+app.use("/api/products", productsRouter);
+app.use("/api/carts", cartsRouter);
 
-app.listen(8080, () => {
-  console.log("Servidor corriendo en puerto 8080");
-});
+module.exports = app;
