@@ -57,27 +57,26 @@ Develop a server that allows:
 
 ### 📦 Products (`/api/products`)
 
-  Method   Route     Description
-  -------- --------- ----------------------------
-  GET      `/`       Get all products
-  GET      `/:pid`   Get a product by ID
-  POST     `/`       Create a new product
-  PUT      `/:pid`   Update an existing product
-  DELETE   `/:pid`   Delete a product by ID
+
+| Method | Route   | Description                |
+| ------ | ------- | -------------------------- |
+| GET    | `/`     | Get all products           |
+| GET    | `/:pid` | Get a product by ID        |
+| POST   | `/`     | Create a new product       |
+| PUT    | `/:pid` | Update an existing product |
+| DELETE | `/:pid` | Delete a product by ID     |
+
 
 ------------------------------------------------------------------------
 
 ### 🛒 Carts (`/api/carts`)
 
-  -------------------------------------------------------------------------
-  Method   Route                  Description
-  -------- ---------------------- -----------------------------------------
-  POST     `/`                    Create a new cart
+| Method | Route                | Description                                           |
+| ------ | -------------------- | ----------------------------------------------------- |
+| POST   | `/`                  | Create a new cart                                     |
+| GET    | `/:cid`              | Get products from a specific cart                     |
+| POST   | `/:cid/product/:pid` | Add a product to a cart (increase quantity if exists) |
 
-  GET      `/:cid`                Get products from a cart by ID
-
-  POST     `/:cid/product/:pid`   Add a product to a cart
-  -------------------------------------------------------------------------
 
 ------------------------------------------------------------------------
 
@@ -161,11 +160,9 @@ npm start
 
 4.  The server runs at:
 
-```{=html}
-<!-- -->
 ```
-    http://localhost:8080
-
+http://localhost:8080
+```
 ------------------------------------------------------------------------
 
 ## ✅ Project Status
